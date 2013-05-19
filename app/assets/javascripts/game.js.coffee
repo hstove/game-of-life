@@ -21,7 +21,7 @@ $(document).ready ->
     false
   $('.board-start').click ->
     clearInterval(mainInterval)
-    window.mainInterval = setInterval(mainLoop, 1000)
+    window.mainInterval = setInterval(mainLoop, 250)
     false
 
 

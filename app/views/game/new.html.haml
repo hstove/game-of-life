@@ -1,9 +1,9 @@
 - size = 25
 %table.main-board
   %tbody
-    - size.times do |col|
+    - @board_size.times do |col|
       %tr
-        - size.times do |row|
+        - @board_size.times do |row|
           %td{"data-row" => row, "data-col" => col}
 
 = link_to "stop", "#", class: 'board-stop'
@@ -13,4 +13,5 @@
 
 
 :javascript
-  var boardSize = #{size};
+  var boardSize = #{@board_size};
+  var initCells = #{@init_cells};
