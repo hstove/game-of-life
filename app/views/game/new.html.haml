@@ -1,0 +1,16 @@
+- size = 25
+%table.main-board
+  %tbody
+    - size.times do |col|
+      %tr
+        - size.times do |row|
+          %td{"data-row" => row, "data-col" => col}
+
+= link_to "stop", "#", class: 'board-stop'
+= link_to "start", "#", class: 'board-start'
+%p click a cell to make it alive.
+%p= link_to "What is this?", "http://en.wikipedia.org/wiki/Conway's_Game_of_Life"
+
+
+:javascript
+  var boardSize = #{size};
